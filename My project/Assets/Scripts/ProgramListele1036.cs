@@ -266,12 +266,12 @@ public class ProgramListele1036 : MonoBehaviour
         form.AddField("silinecekHoca", silinecekHocaa);
         form.AddField("silinecekDers", silinecekDerss);
         form.AddField("silinecekSinif", silinecekSiniff);
-        form.AddField("silinecekSaatt", silinecekSaatt);
-        form.AddField("silinecekGunn", silinecekGunn);
+        form.AddField("silinecekSaat", silinecekSaatt);
+        form.AddField("silinecekGun", silinecekGunn);
 
 
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/unity-database/OgretmenSilme.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/unity-database/ProgramSilme.php", form))
         {
             yield return www.SendWebRequest();
 

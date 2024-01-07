@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ProgramListele1040 : MonoBehaviour
@@ -77,6 +78,13 @@ public class ProgramListele1040 : MonoBehaviour
                             gobj4.GetComponent<ProgramListeleEk>().Hoca.text = hocaAdi;
                             gobj4.GetComponent<ProgramListeleEk>().Ders.text = dersAdi;
                             gobj4.GetComponent<ProgramListeleEk>().Saat.text = saat;
+                            gobj4.GetComponent<ProgramListeleEk>().SilButton.onClick.AddListener(() =>
+                            {
+
+                                StartCoroutine(ProgramSil(hocaAdi, dersAdi, sinif, saat, gun));
+                                SceneManager.LoadScene(7);
+
+                            });
                         }
                     }
 
@@ -112,6 +120,13 @@ public class ProgramListele1040 : MonoBehaviour
                             gobj4.GetComponent<ProgramListeleEk>().Hoca.text = hocaAdi;
                             gobj4.GetComponent<ProgramListeleEk>().Ders.text = dersAdi;
                             gobj4.GetComponent<ProgramListeleEk>().Saat.text = saat;
+                            gobj4.GetComponent<ProgramListeleEk>().SilButton.onClick.AddListener(() =>
+                            {
+
+                                StartCoroutine(ProgramSil(hocaAdi, dersAdi, sinif, saat, gun));
+                                SceneManager.LoadScene(7);
+
+                            });
                         }
                     }
 
@@ -147,6 +162,13 @@ public class ProgramListele1040 : MonoBehaviour
                             gobj4.GetComponent<ProgramListeleEk>().Hoca.text = hocaAdi;
                             gobj4.GetComponent<ProgramListeleEk>().Ders.text = dersAdi;
                             gobj4.GetComponent<ProgramListeleEk>().Saat.text = saat;
+                            gobj4.GetComponent<ProgramListeleEk>().SilButton.onClick.AddListener(() =>
+                            {
+
+                                StartCoroutine(ProgramSil(hocaAdi, dersAdi, sinif, saat, gun));
+                                SceneManager.LoadScene(7);
+
+                            });
                         }
                     }
 
@@ -182,6 +204,13 @@ public class ProgramListele1040 : MonoBehaviour
                             gobj4.GetComponent<ProgramListeleEk>().Hoca.text = hocaAdi;
                             gobj4.GetComponent<ProgramListeleEk>().Ders.text = dersAdi;
                             gobj4.GetComponent<ProgramListeleEk>().Saat.text = saat;
+                            gobj4.GetComponent<ProgramListeleEk>().SilButton.onClick.AddListener(() =>
+                            {
+
+                                StartCoroutine(ProgramSil(hocaAdi, dersAdi, sinif, saat, gun));
+                                SceneManager.LoadScene(7);
+
+                            });
                         }
                     }
 
@@ -217,10 +246,42 @@ public class ProgramListele1040 : MonoBehaviour
                             gobj4.GetComponent<ProgramListeleEk>().Hoca.text = hocaAdi;
                             gobj4.GetComponent<ProgramListeleEk>().Ders.text = dersAdi;
                             gobj4.GetComponent<ProgramListeleEk>().Saat.text = saat;
+                            gobj4.GetComponent<ProgramListeleEk>().SilButton.onClick.AddListener(() =>
+                            {
+
+                                StartCoroutine(ProgramSil(hocaAdi, dersAdi, sinif, saat, gun));
+                                SceneManager.LoadScene(7);
+
+                            });
                         }
                     }
 
                     break;
+            }
+        }
+    }
+    IEnumerator ProgramSil(string silinecekHocaa, string silinecekDerss, string silinecekSiniff, string silinecekSaatt, string silinecekGunn)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("silinecekHoca", silinecekHocaa);
+        form.AddField("silinecekDers", silinecekDerss);
+        form.AddField("silinecekSinif", silinecekSiniff);
+        form.AddField("silinecekSaat", silinecekSaatt);
+        form.AddField("silinecekGun", silinecekGunn);
+
+
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/unity-database/ProgramSilme.php", form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
             }
         }
     }
