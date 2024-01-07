@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Scenes/Giri\u015F.unity"
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/AdminAnasayfa.unity
+    guid: a2c59d16f18c54c46b0aad1ba05eef26
+  - enabled: 1
+    path: Assets/Scenes/ProgramDuzenle.unity
+    guid: ddb6cfb074b15664cbb74a5997de7837
+  - enabled: 1
+    path: Assets/Scenes/OgretmenEkle.unity
+    guid: 72dd40d29daf11440a2099184fdc4f29
+  - enabled: 1
+    path: Assets/Scenes/DersEkle.unity
+    guid: e8b962f651830ec469e6c0e47ff10de0
+  - enabled: 1
+    path: Assets/Scenes/SinifEkle.unity
+    guid: cad4fd70ff109c14186791d8ab115d5e
+  - enabled: 1
+    path: Assets/Scenes/Program.unity
+    guid: e03711cf17e68a9408c45046730bb51b
+  - enabled: 1
+    path: Assets/Scenes/Program1036.unity
+    guid: 2df3a5e2e6dc399478e9526d3a12dc62
+  - enabled: 1
+    path: Assets/Scenes/Program1040.unity
+    guid: 6c49451d5e0e0db4dbe5828519033e14
+  - enabled: 1
+    path: Assets/Scenes/Program1041.unity
+    guid: c7a96b25b4c5d1e48b715061e0fd3107
+  - enabled: 1
+    path: Assets/Scenes/Program1044.unity
+    guid: 4becb1618ddf3f0449c69fda99bff1c2
+  m_configObjects: {}
