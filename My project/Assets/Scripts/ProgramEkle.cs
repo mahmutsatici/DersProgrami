@@ -48,6 +48,9 @@ public class NewBehaviourScript : MonoBehaviour
             else
             {
                 Debug.Log(www.downloadHandler.text);
+                YaziGorunum yazigorunum = GetComponent<YaziGorunum>();
+                Text uyari = yazigorunum.uyari;
+                uyari.text = www.downloadHandler.text;
             }
         }
     }
