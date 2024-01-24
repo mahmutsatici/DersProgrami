@@ -36,4 +36,12 @@ Eğer bu projeye katkıda bulunmak istiyorsanız, lütfen bir fork oluşturun ve
 Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır. Detaylı bilgi için LICENSE dosyasını kontrol edin.
 
 
+## Uygulama Resimleri
+![full](https://github.com/mahmutsatici/DersProgrami/blob/main/My%20project/ProjePicture/proje.png)
+
+
+
+## Uygulama Resimleri
+![full](https://github.com/mahmutsatici/DersProgrami/blob/main/My%20project/ProjePicture/veritabani.png)
+
 
